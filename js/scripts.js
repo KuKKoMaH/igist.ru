@@ -3,6 +3,7 @@ $(function () {
     var pathname = window.location.pathname.split('/');
     var $base = $('<base>');
     $base.attr('href', '/' + pathname[1] + '/');
+    $base.appendTo($('head'));
   }
 
   // Preloader
