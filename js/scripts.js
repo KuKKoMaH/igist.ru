@@ -1,4 +1,9 @@
 $(function () {
+  if (window.location.host.indexOf('github.io') !== -1) {
+    var pathname = window.location.pathname.split('/');
+    var $base = $('<base>');
+    $base.attr('href', '/' + pathname[1] + '/');
+  }
 
   // Preloader
   $(window).on('load', function () {
